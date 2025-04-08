@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <title>Foodiez</title>
+  <link rel="shortcut icon" href="img4.png" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Font Awesome for icons -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+  <!-- Navbar Starts -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top w-100">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: #ff0000;">
+          <img src="img4.png" alt="Foodiez Logo" width="37" height="37">
+          Foodiez
+        </a>
+
+        <!-- Bootstrap Default Navbar Toggler (Toggle Button) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> <!-- Default toggle icon -->
+        </button>
+
+        <!-- Collapsing Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+            <!-- Navbar Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#explore">Explore Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="main-btn" href="#order" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="click here to order food">
+                Order Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Navbar Ends -->
+
+  <!-- Carousel Starts -->
+  <section id="home">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="image99999.avif" class="d-block w-100" alt="Delicious food on the table">
+          <div class="carousel-caption d-block d-md-block">
+            <h5>Foodiez</h5>
+            <p>Welcome to Foodiez Website.<br> Enjoy Our Delicious Meal.</p>
+            <button type="button" class="btn btn-success">
+              <a href="Menu.jpg" target="_blank" style="color: white; text-decoration: none;" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" title="click here to download menu">Download Menu</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Carousel Ends -->
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section py-5">
+    <div class="container my-5">
+
+      <div class="row featurette d-flex justify-content-center text-align-center">
+
+        <div class="col-md-7 d-flex flex-column justify-content-center">
+
+          <h2>About Us</h2>
+          <p>
+            Foodiez is a food delivery service that specializes in bringing you the best meals from your favorite
+            restaurants, right to your door. We are committed to delivering fresh, delicious, and quality food with
+            exceptional service. Our goal is to make your meal experience enjoyable and hassle-free. Foodiez offers a
+            seamless ordering process through our user-friendly app, ensuring your cravings are satisfied in just a few
+            taps. Whether it's breakfast, lunch, dinner, or a late-night snack, we are here to deliver happiness
+            to your doorstep! For more details click this website-> <a href="https://thefoodiezkp.weebly.com/"
+              style="text-decoration: none;">www.foodiez.co.in</a>
+          </p>
+        </div>
+        <div class="col-md-5">
+
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" id="tyty"
+            style="height: 100%; object-fit: cover;" src="resturent.jpg" alt="Image">
+          </img>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+  </section>
+
+  <!-- Explore Foods Section -->
+  <!--
+  <section id="explore" class="explore-section py-5">
+    <div class="container">
+      <h2>Explore Foods</h2>
+      <div class="row" id="abc">
+        <div class="col-md-2 col-6 food-item mb-4">
+          <img src="food11_640.jpg" alt="Food 1" id="xyz" class="img-fluid">
+          <h4>Pizza</h4>
+        </div>
+        <div class="col-md-2 col-6 food-item mb-4">
+          <img src="burger640.jpg" alt="Food 2" id="xyz" class="img-fluid">
+          <h4>Burger</h4>
+        </div>
+        <div class="col-md-2 col-6 food-item mb-4">
+          <img src="rice3.jpg" alt="Food 3" id="xyz" class="img-fluid">
+          <h4>Fried Rice</h4>
+        </div>
+        <div class="col-md-2 col-6 food-item mb-4">
+          <img src="pasta3.jpg" alt="Food 4" id="xyz" class="img-fluid">
+          <h4>Pasta</h4>
+        </div>
+        <div class="col-md-2 col-6 food-item mb-4">
+          <img src="chicken2.png" alt="Food 5" class="img-fluid">
+          <h4>Chilli Chicken</h4>
+        </div>
+        <div class="col-md-2 col-6 food-item mb-4">
+          <img src="mutton.jpg" alt="Food 6" id="xyz" class="img-fluid">
+          <h4>Mutton Curry</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+
+
+  <section id="explore" class="explore-section py-5">
+    <div class="container">
+      <h2>Explore Our Menu</h2>
+      <div class="d-flex flex-wrap justify-content-between align-items-center my-3 gap-2">
+        <button id="add-food-btn" class="btn btn-primary flex-grow-1 flex-md-grow-0">&#8594; See More</button>
+        <button id="remove-food-btn" class="btn btn-danger flex-grow-1 flex-md-grow-0">&#8592; See Less</button>
+      </div>
+      <div class="row" id="abc">
+        <!-- Pizza -->
+        <div class="col-md-2 col-6 food-item mb-4">
+          <div class="card">
+            <img src="food11_640.jpg" alt="Pizza" class="card-img-top img-fluid">
+            <div class="card-body text-center">
+              <h4>Cheese Pizza</h4>
+              <div>
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+              </div>
+              <p class="text-success">₹550</p>
+            </div>
+          </div>
+        </div>
+        <!-- Burger -->
+        <div class="col-md-2 col-6 food-item mb-4">
+          <div class="card">
+            <img src="burger640.jpg" alt="Burger" class="card-img-top img-fluid">
+            <div class="card-body text-center">
+              <h4>Veg Burger</h4>
+              <div>
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+              </div>
+              <p class="text-success">₹200</p>
+            </div>
+          </div>
+        </div>
+        <!-- Fried Rice -->
+        <div class="col-md-2 col-6 food-item mb-4">
+          <div class="card">
+            <img src="rice3.jpg" alt="Fried Rice" class="card-img-top img-fluid">
+            <div class="card-body text-center">
+              <h4>Mixed Polao</h4>
+              <div>
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+              </div>
+              <p class="text-success">₹250</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pasta -->
+        <div class="col-md-2 col-6 food-item mb-4">
+          <div class="card">
+            <img src="pasta3.jpg" alt="Pasta" class="card-img-top img-fluid">
+            <div class="card-body text-center">
+              <h4>Masala Pasta</h4>
+              <div>
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+              </div>
+              <p class="text-success">₹160</p>
+            </div>
+          </div>
+        </div>
+        <!-- Chilli Chicken -->
+        <div class="col-md-2 col-6 food-item mb-4">
+          <div class="card">
+            <img src="chicken2.png" alt="Chilli Chicken" class="card-img-top img-fluid">
+            <div class="card-body text-center">
+              <h4>Chilli Chicken</h4>
+              <div>
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+              </div>
+              <p class="text-success">₹190</p>
+            </div>
+          </div>
+        </div>
+        <!-- Mutton Curry -->
+        <div class="col-md-2 col-6 food-item mb-4">
+          <div class="card">
+            <img src="mutton.jpg" alt="Mutton Curry" class="card-img-top img-fluid">
+            <div class="card-body text-center">
+              <h4>Mutton Curry</h4>
+              <div>
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+              </div>
+              <p class="text-success">₹340</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="row" id="efg" style="display: none;">
+        <div class="col-md-2 col-6 food-item mb-4">
+          <div class="card">
+            <img src="Paneerpic.png" alt="Paneer Masala" class="card-img-top img-fluid">
+            <div class="card-body text-center">
+              <h4>Paneer Masala</h4>
+              <div>
+                <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+              </div>
+              <p class="text-success">₹120</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row" id="efg" style="display: none;">
+          <div class="col-md-2 col-6 food-item mb-4">
+            <div class="card">
+              <img src="Basanti Pulao pic.jpg" alt="Basanti Pulao" class="card-img-top img-fluid">
+              <div class="card-body text-center">
+                <h4>Basanti Pulao</h4>
+                <div>
+                  <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                </div>
+                <p class="text-success">₹96</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row" id="efg" style="display: none;">
+            <div class="col-md-2 col-6 food-item mb-4">
+              <div class="card">
+                <img src="Mutton Biryani.jpg" alt="Mutton Biriyani" class="card-img-top img-fluid">
+                <div class="card-body text-center">
+                  <h4>Mutton Biryani</h4>
+                  <div>
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                  </div>
+                  <p class="text-success">₹380</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row" id="efg" style="display: none;">
+              <div class="col-md-2 col-6 food-item mb-4">
+                <div class="card">
+                  <img src="chowmein.jpg" alt="Veg Chowmein" class="card-img-top img-fluid">
+                  <div class="card-body text-center">
+                    <h4>Veg Chowmein</h4>
+                    <div>
+                      <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                    </div>
+                    <p class="text-success">₹155</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="row" id="efg" style="display: none;">
+                <div class="col-md-2 col-6 food-item mb-4">
+                  <div class="card">
+                    <img src="ChiliPaneerpic2.jpg" alt="Chilli Paneer" class="card-img-top img-fluid">
+                    <div class="card-body text-center">
+                      <h4>Chilli Paneer</h4>
+                      <div>
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                      </div>
+                      <p class="text-success">₹105</p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-2 col-6 food-item mb-4">
+                  <div class="card">
+                    <img src="Chicken Biryani.jpg" alt="Chicken Biryani" class="card-img-top img-fluid">
+                    <div class="card-body text-center">
+                      <h4>Chicken Biryani</h4>
+                      <div>
+                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                      </div>
+                      <p class="text-success">₹210</p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row" id="efg" style="display: none;">
+                  <div class="col-md-2 col-6 food-item mb-4">
+                    <div class="card">
+                      <img src="Chocolate Pastrie.jpg" alt="Chocolate Pastries" class="card-img-top img-fluid">
+                      <div class="card-body text-center">
+                        <h4>Chocolate Pastries</h4>
+                        <div>
+                          <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                        </div>
+                        <p class="text-success">₹60</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row" id="efg" style="display: none;">
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="strawberrypastry.jpeg" alt="Strawberry Pastries" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Strawberry Pastries</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹65</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="icecream4.jpg" alt="Ice Cream" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Vanilla Ice Cream</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹45</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card ">
+                        <img src="KajuBadamLassi.jpg" alt="Lassi" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Kaju Badam Lassi</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹35</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="hotchocolate.jpg" alt="Hot Chocolate" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Dark Hot Chocolate</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹52</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="MangoLassi3.jpg" alt="Mango Lassi" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Special Mango Lassi</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹56</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  </section>
+
+
+
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Customer Reviews</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="review-item text-center">
+              <img src="review2.jpeg" alt="pic1" class="review-image rounded-circle">
+              <p>"The food was amazing! It arrived hot and on time. Highly recommend."</p>
+              <strong>Akash</strong>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="review-item text-center">
+              <img src="review3.jpg" alt="Sumit" class="review-image rounded-circle">
+              <p>"Great experience! The pizza was delicious, and the delivery was quick."</p>
+              <strong>Rohit</strong>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="review-item text-center">
+              <img src="review4.jpg" alt="Tanuja" class="review-image rounded-circle">
+              <p>"Very satisfied with the quality of food and service. Will order again!"</p>
+              <strong>Tanuja</strong>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="review-item text-center">
+              <img src="review5.jpeg" alt="Tanuja" class="review-image rounded-circle">
+              <p>"Very satisfied with the quality of food and service. Will order again!"</p>
+              <strong>Neha</strong>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="review-item text-center">
+              <img src="review6.jpg" alt="Tanuja" class="review-image rounded-circle">
+              <p>"Very satisfied with the quality of food and service. Will order again!"</p>
+              <strong>Sanjay</strong>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section py-5">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="row">
+        <div class="col-md-3 team-member">
+          <img src="team1.jpg" alt="Team Member 1" id="cde" class="img-fluid">
+          <h4>Sujit</h4>
+          <p>Founder & CEO</p>
+        </div>
+        <div class="col-md-3 team-member">
+          <img src="team2.jpg" alt="Team Member 2" id="cde" class="img-fluid">
+          <h4>Neha</h4>
+          <p>Chief Operations Officer</p>
+        </div>
+        <div class="col-md-3 team-member">
+          <img src="team3.jpg" alt="Team Member 3" id="cde" class="img-fluid">
+          <h4>Joy</h4>
+          <p>Marketing Head</p>
+        </div>
+        <div class="col-md-3 team-member">
+          <img src="team4.jpg" alt="Team Member 4" id="cde" class="img-fluid">
+          <h4>Anwesha</h4>
+          <p>Head Chef</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Order Now Section -->
+  <section id="order" class="py-5 bg-light">
+    <div class="container">
+      <h2 id="hijk" class="text-center mb-4">Order Now</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Delivery Address</label>
+              <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="food" class="form-label">Select Food Item</label>
+              <select class="form-select" id="food" required>
+                <option value="">Choose...</option>
+                <option value="Pizza">Cheese Pizza</option>
+                <option value="Burger">Veg Burger</option>
+                <option value="Pasta">Mixed Pulao</option>
+                <option value="Sushi">Masala Pasta</option>
+                <option value="Pizza">Chilli Chicken</option>
+                <option value="Burger">Mutton Curry</option>
+                <option value="Pasta">Paneer Masala</option>
+                <option value="Sushi">Basanti Pulao</option>
+                <option value="Pizza">Mutton Biriyani</option>
+                <option value="Burger">Veg Chowmein</option>
+                <option value="Pasta">Chilli Paneer</option>
+                <option value="Sushi">Chicken Biriyani</option>
+                <option value="Pizza">Chocolate Pastries</option>
+                <option value="Burger">strawberry Pastries</option>
+                <option value="Pasta">Vanilla Icecream</option>
+                <option value="Sushi">Kaju Badam Lassi</option>
+                <option value="Pasta">Dark Hot Chocolate</option>
+                <option value="Sushi">Special Mango Lassi</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+            </div>
+
+
+            <div class="mb-4">
+              <label class="form-label d-block">Payment Method</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="upi" value="UPI" required>
+                <label class="form-check-label" for="upi">UPI</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="card" value="Card" required>
+                <label class="form-check-label" for="card">Credit/Debit Card</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="cod" value="COD" required>
+                <label class="form-check-label" for="cod">Cash on Delivery</label>
+              </div>
+            </div>
+            <button type="submit" style="background-color: #ff0000;" class="btn btn-danger w-100"
+              onclick="validation()">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Foodiez</h2>
+          <p>
+            Foodiez makes it easy to find and enjoy the food you’re craving—whether it’s a quick bite, comfort food, or
+            something new to try. From local favorites to trending spots, we bring delicious meals right to your door,
+            with a touch of care in every order.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h4>Features</h4>
+          <p>Food you’ll love</p>
+          <p>Right to your door</p>
+          <p>Picked just for you</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Quick Contact</h4>
+          <p><i class="fas fa-phone"></i> +91 ​1234567890</p>
+          <p><i class="fas fa-envelope-open-text"></i> Foodiez@gmail.com</p>
+          <p><i class="fas fa-home"></i> Khidirpur, Kolkata, IND</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Follw us</h4>
+          <p><i class="fab fa-facebook"></i> Facebook</p>
+          <p><i class="fab fa-twitter-square"></i> Twitter</p>
+          <p><i class="fab fa-instagram-square"></i> Instagram</p>
+        </div>
+        <div class="container my-5">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+              <form class="d-flex flex-column flex-sm-row gap-2 justify-content-center align-items-stretch">
+                <input type="text" class="form-control flex-grow-1" placeholder="Enter your feedback">
+                <button type="submit" class="btn btn-warning">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">Copyright &copy; 2024 (made by Rajdip Sanyal)</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
