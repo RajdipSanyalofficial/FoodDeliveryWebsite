@@ -65,30 +65,65 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone = document.getElementById("phone").value.trim();
     const address = document.getElementById("address").value.trim();
     const food = document.getElementById("food").value;
+    const country = document.getElementById("country").value;
+    const state = document.getElementById("state").value;
+    const zip = document.getElementById("zip").value.trim();
     const quantity = document.getElementById("quantity").value.trim();
     const paymentMethods = document.getElementsByName("paymentMethod");
+    const cardSelected = document.getElementById("card").checked;
+    const cardName = document.getElementById("cardName").value.trim();
+    const cardNumber = document.getElementById("cardNumber").value.trim();
+    const expiry = document.getElementById("expiry").value.trim();
+    const cvv = document.getElementById("cvv").value.trim();
+
+
 
     // Simple field check
-    if (!name || !email || !phone || !address || !food || !quantity) {
+    if (!name || !email || !phone || !address || !country || !zip || !quantity) {
       alert("Please fill in all fields.");
       return false;
     }
 
-    // Email format check
+    // Email check
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       alert("Please enter a valid email address.");
       return false;
     }
 
-    // Phone format check (10 digits only
+    // 10 Digits Phone format check 
     const phonePattern = /^\d{10}$/;
     if (!phonePattern.test(phone)) {
       alert("Please enter a valid 10-digit phone number.");
       return false;
     }
 
-    // Quantity check
+    // Country 
+    if (country !== "India") {
+      alert("We only deliver in India.");
+      return false;
+    }
+  
+    // State 
+    if (state === "") {
+      alert("Please select your state.");
+      return false;
+    }
+  
+    // ZIP 
+    const zipPattern = /^\d{6}$/;
+    if (!zipPattern.test(zip)) {
+      alert("Please enter a valid 6-digit ZIP code.");
+      return false;
+    }
+
+    // Food item
+    if (food === "") {
+      alert("Please select food item.");
+      return false;
+    }
+
+    // Quantity 
     if (isNaN(quantity) || quantity < 1) {
       alert("Please enter a valid quantity (at least 1).");
       return false;
@@ -107,6 +142,34 @@ document.addEventListener("DOMContentLoaded", () => {
     return false;
   }
 
+  // If card selected, validate card fields
+  if (cardSelected) {
+    if (!cardName || !cardNumber || !expiry || !cvv) {
+      alert("Please fill in all card details.");
+      return false;
+    }
+
+    const cardNumPattern = /^\d{16}$/;
+    if (!cardNumPattern.test(cardNumber.replace(/\s|-/g, ''))) {
+      alert("Please enter a valid 16-digit card number.");
+      return false;
+    }
+
+    const expiryPattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+    if (!expiryPattern.test(expiry)) {
+      alert("Please enter valid expiry date.");
+      return false;
+    }
+
+    const cvvPattern = /^\d{3,4}$/;
+    if (!cvvPattern.test(cvv)) {
+      alert("Please enter a valid 3 digit CVV.");
+      return false;
+    }
+  }
+
+
+  // Confirmation
   const abcd= confirm("Are you sure you want to place the order?");
   if(!abcd){
     return false

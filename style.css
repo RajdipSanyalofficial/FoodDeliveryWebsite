@@ -783,13 +783,13 @@ html{
 
     .navbar-expand-lg .navbar-nav .nav-link {
         font-weight: 500;
-        margin-left: 1.3rem;
+        margin-left: 1.0rem;
         position: relative;
         transition: color 0.3s;
     }
 
     .main-btn {
-        margin-left: 1.5rem;
+        margin-left: 1.3rem;
         display: inline-block;
         padding: 0.625rem 1.875rem;
         line-height: 1.5625rem;
