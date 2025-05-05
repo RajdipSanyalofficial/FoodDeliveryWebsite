@@ -20,6 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+// Navbar close in mobile view
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('.nav-link, .main-btn');
+  const navbarCollapse = document.getElementById('navbarNav');
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      const collapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (collapse && navbarCollapse.classList.contains('show')) {
+        collapse.hide();
+      }
+    });
+  });
+});
+
+
+
+
 //Food Section
 document.addEventListener("DOMContentLoaded", () => {
     const foodContainer = document.getElementById("abc");
