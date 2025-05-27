@@ -837,5 +837,28 @@ html{
     }
 }
 
+/* typing animation css */
+#typing-text-container{
+    display: inline-block;
+    min-height: 1.08em;
+}
+
+#text{
+    display: inline-block;
+    white-space: nowrap;
+}
+/* typing animation css */
+
+
+/* download menu button hover */
+#oooo:hover{
+    background-color: #019510; 
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(13, 255, 0, 0.3);
+  border-color: #019510;
+}
+/* download menu button hover */
+
+
 
 

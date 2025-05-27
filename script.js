@@ -201,3 +201,41 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   }
   //Ends Order Now Form Validation 
+
+
+  // Typing Animation starts
+  const texts = ["Enjoy Our Delicious Food","Click Below For Our Menu"]; 
+    let index = 0;
+    let charIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+    
+    function type() {
+        if (index === texts.length) {
+            index = 0; 
+        }
+    
+        currentText = texts[index];
+    
+        if (isDeleting) {
+            charIndex--;
+        } else {
+            charIndex++;
+        }
+    
+        document.querySelector(".text").textContent = currentText.substring(0, charIndex);
+    
+        if (charIndex === currentText.length) {
+            isDeleting = true;
+            setTimeout(type, 2000); 
+        } else if (charIndex === 0) {
+            isDeleting = false;
+            index++;
+            setTimeout(type, 500); 
+        } else {
+            setTimeout(type, isDeleting ? 100 : 150); 
+        }
+    }
+
+    type();
+    // Typing Animation ends
