@@ -859,6 +859,13 @@ html{
 }
 /* download menu button hover */
 
+@media (max-width: 576px) {
+  #oooo {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
 
 
 
