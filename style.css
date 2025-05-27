@@ -837,6 +837,7 @@ html{
     }
 }
 
+
 /* typing animation css */
 #typing-text-container{
     display: inline-block;
@@ -859,13 +860,15 @@ html{
 }
 /* download menu button hover */
 
+
+/* download menu button in phone view */
 @media (max-width: 576px) {
   #oooo {
     padding: 6px 12px;
-    font-size: 0.75rem;
+    font-size: 0.69rem;
   }
 }
-
+/* download menu button in phone view */
 
 
 
