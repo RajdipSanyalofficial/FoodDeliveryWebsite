@@ -872,3 +872,22 @@ html{
 
 
 
+/* back to top button css */
+#top-button {
+  color: #ce0404;
+  bottom: 30px; 
+  right: 30px; 
+  width: 45px; 
+  height: 45px; 
+  z-index: 999; 
+  transition: background-color 0.3s ease;
+}
+
+#top-button:hover {
+  background-color: #019510 !important;
+}
+/* back to top button css */
+
+
+
+
