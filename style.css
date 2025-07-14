@@ -6,22 +6,21 @@ body {
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 
 /* Navbar Styles */
 
-.navbar 
-{
+.navbar {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3 ease-in-out;
 }
 
 .navbar.scrolled {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
-    background-color: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 
@@ -115,70 +114,32 @@ html{
 }
 
 
+/* Counter Section */
+
+.banner-highlights {
+    background-color: #ff0000;
+    color: white;
+    border-radius: 12px;
+}
+
+.banner-highlights h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: yellow;
+}
+
+.banner-highlights p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Counter Section */
 
 
 /* Explore Foods Section */
-/*
-.explore-section {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.explore-section h2 {
-    color: #ff0000;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.food-item {
-    margin-bottom: 1.5rem;
-}
-
-.food-item img {
-    border-radius: 10px;
-    margin-bottom: 1.1rem;
-    object-fit: cover;
-}
-
-.food-item h4 {
-    font-size: 1.25rem;
-    color: #333;
-}
-
-.food-item p {
-    color: #777;
-}
-
-
-#xyz{
-    transition: 0.5 ease;
-    cursor: pointer;
-}
-
-#abc:hover > :not(:hover)
-{
-    opacity: 0.3;
-}
-
-#xyz{
-    transform: scale(1.1);
-}
-
-#tyty
-    {
-      border-radius: 5%;
-      transition: 1s;
-    }
-
-    #tyty:hover
-    {
-      transform: scale(1.07);
-      z-index: 2;
-    }
-
-*/
-
-/* Explore Section Styles */
 .explore-section {
     padding: 4rem 0;
     text-align: center;
@@ -186,7 +147,8 @@ html{
 }
 
 .explore-section h2 {
-    color: #ff0000; /* Changed to a brighter red for better contrast */
+    color: #ff0000;
+    /* Changed to a brighter red for better contrast */
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
@@ -237,16 +199,14 @@ html{
     font-size: 1rem;
 }
 
-#abc
-{
+#abc {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
 }
 
-#abc .food-item
-{
+#abc .food-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,7 +228,7 @@ html{
     transform: scale(1.15);
 }
 
-#abc:hover > :not(:hover) {
+#abc:hover> :not(:hover) {
     opacity: 0.3;
 }
 
@@ -285,19 +245,19 @@ html{
 }
 
 #add-food-btn,
-#remove-food-btn{
-   background-color: #ff0000;
-   color: white bold;
-   border: 0.1875rem solid red;
-   font-size: 0.9375rem;
-   font-weight: 600;
-   box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
-   height: 42px;
-   line-height: 1.5625rem;
-   margin: 0 10px;
-   padding: 5px 10px;
-   font-size: 12px;
-   cursor: pointer;
+#remove-food-btn {
+    background-color: #ff0000;
+    color: white bold;
+    border: 0.1875rem solid red;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    height: 42px;
+    line-height: 1.5625rem;
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 
@@ -316,38 +276,37 @@ html{
 
 .reviews-section {
     background-color: #f9f9f9;
-  }
-  
-  .review-item {
+}
+
+.review-item {
     padding: 20px;
     border: 1px solid #fff;
     border-radius: 10px;
     background: #ff0000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .review-image
-  {
-   max-width: 40px;
+.review-image {
+    max-width: 40px;
     max-height: 40px;
     margin-bottom: 18px;
     object-fit: cover;
     padding: 0px;
     border: 1px solid #fff;
     border-radius: 50%;
-  }
-  
-  .review-item p {
+}
+
+.review-item p {
     font-style: italic;
     color: #fff;
-  }
-  
-  .review-item strong {
+}
+
+.review-item strong {
     display: block;
     margin-top: 10px;
     font-weight: bold;
     color: #fff;
-  }
+}
 
 
 /* Team Section */
@@ -413,24 +372,21 @@ html{
     color: #ff0000;
 }
 
-#hijk
-{
+#hijk {
     color: #ff0000;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 
 }
 
-#cde
-    {
-      transition: 1s;
-    }
+#cde {
+    transition: 1s;
+}
 
-    #cde:hover
-    {
-      transform: scale(1.07);
-      z-index: 2;
-    }
+#cde:hover {
+    transform: scale(1.07);
+    z-index: 2;
+}
 
 
 /* Footer Styles */
@@ -443,25 +399,31 @@ html{
 
 
 ::-webkit-scrollbar {
-    width: 18px; /* Width of the scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: white; /* Light red background for the track */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #ff0000; /* Red scrollbar thumb */
-    border-radius: 6px; /* Rounded corners */
-    border: 3px solid white; /* Space around the thumb */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #ff0000; /* Darker red on hover */
-  }
+    width: 18px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+    /* Light red background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    /* Red scrollbar thumb */
+    border-radius: 6px;
+    /* Rounded corners */
+    border: 3px solid white;
+    /* Space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff0000;
+    /* Darker red on hover */
+}
 
 
-  /* Email Subscription Styles */
+/* Email Subscription Styles */
 .footer-subscribe {
     margin-top: 3rem;
     display: flex;
@@ -469,16 +431,16 @@ html{
     gap: 1rem;
     justify-content: center;
     align-items: center;
-  }
-  
-  .footer-subscribe input[type="email"] {
+}
+
+.footer-subscribe input[type="email"] {
     flex: 1 1 300px;
     padding: 0.75rem 1rem;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
-  }
-  
+}
+
 /* Responsive Styles */
 
 
@@ -510,33 +472,30 @@ html{
     }
     
     */
-    
-    #xyz{
+
+    #xyz {
         transition: 0.5 ease;
         cursor: pointer;
     }
-    
-    #abc:hover > :not(:hover)
-    {
+
+    #abc:hover> :not(:hover) {
         opacity: 0.3;
     }
-    
-    #xyz{
+
+    #xyz {
         transform: scale(1.1);
     }
-    
-    #tyty
-        {
-          border-radius: 5%;
-          transition: 1s;
-        }
-    
-        #tyty:hover
-        {
-          transform: scale(1.07);
-          z-index: 2;
-        }  
-            
+
+    #tyty {
+        border-radius: 5%;
+        transition: 1s;
+    }
+
+    #tyty:hover {
+        transform: scale(1.07);
+        z-index: 2;
+    }
+
 }
 
 
@@ -550,21 +509,20 @@ html{
     }
 
 
-    #abc{
+    #abc {
         flex-direction: row;
     }
 
-    .food-item 
-    {
+    .food-item {
         height: auto;
     }
 
-    .food-item img{
+    .food-item img {
         height: 120px;
     }
 
-    .food-item h4{
-    font-size: 1.0rem;
+    .food-item h4 {
+        font-size: 1.0rem;
     }
 }
 
@@ -587,11 +545,11 @@ html{
         text-align: center;
     }
 
-    
+
     .food-item h4 {
         font-size: 1rem;
     }
-    
+
 
     .review-item p {
         font-size: 0.875rem;
@@ -609,16 +567,17 @@ html{
         font-size: 1.25rem;
         padding: 0.8rem 2rem;
     }
+
     .carousel-caption h5 {
-        font-size: 1.5rem; 
-      }
-    
-      .carousel-caption p {
-        font-size: 1rem; 
-      }
-    
-      .carousel-caption button {
-        font-size: 0.9rem; 
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption button {
+        font-size: 0.9rem;
     }
 
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -666,9 +625,8 @@ html{
         transition: 0.5 ease;
         cursor: pointer;
     }
-    
-    #abc:hover > :not(:hover)
-    {
+
+    #abc:hover> :not(:hover) {
         opacity: 0.3;
     }
 
@@ -679,30 +637,28 @@ html{
         object-fit: cover;
     }
 
-    #cde
-    {
-      transition: 1s;
+    #cde {
+        transition: 1s;
     }
 
-    #cde:hover
-    {
-      transform: scale(1.07);
-      z-index: 2;
-    }        
+    #cde:hover {
+        transform: scale(1.07);
+        z-index: 2;
+    }
 
-#abc{
-    flex-direction: column;
-    align-items: center;
-}
+    #abc {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.food-item {
-    width: 90%;
-    margin-bottom: 20px;
-}
+    .food-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 
-.food-item img{
-    height: 100px;
-}
+    .food-item img {
+        height: 100px;
+    }
 
 }
 
@@ -711,46 +667,46 @@ html{
     padding: 100px 20px 10px;
     background-image: linear-gradient(#ce0404, #cc0000);
     color: #ffffff;
-  }
-  
-  .footer-logo {
+}
+
+.footer-logo {
     width: 200px;
     margin-top: 15px;
     margin-bottom: 15px;
-  }
-  
-  .footer h4 {
+}
+
+.footer h4 {
     text-align: left;
     margin-top: 15px;
     margin-bottom: 25px;
-  }
-  
-  .footer p {
+}
+
+.footer p {
     font-size: 14px;
     text-align: left;
     padding-right: 35px;
-  }
-  
-  p > .fas {
+}
+
+p>.fas {
     color: #ffffff;
-  }
-  
-  .footer .row .fas,
-  .fab {
+}
+
+.footer .row .fas,
+.fab {
     padding-right: 15px;
     font-size: 15px;
-  }
-  
-  .footer hr {
+}
+
+.footer hr {
     margin-top: 10px;
     background: #efefef;
-  }
-  
-  .footer .copyright {
+}
+
+.footer .copyright {
     text-align: center;
-  }
-  
-    /* Footer section css */
+}
+
+/* Footer section css */
 
 
 @media (max-width: 280px) {
@@ -770,7 +726,7 @@ html{
     .food-item img,
     .review-item,
     .team-member {
-    margin-bottom: 2rem;
+        margin-bottom: 2rem;
     }
 
     .order-now-section a {
@@ -811,83 +767,80 @@ html{
         margin-right: 0%;
     }
 
-    #xyz{
+    #xyz {
         transition: 0.5 ease;
         cursor: pointer;
     }
-    
-    #abc:hover > :not(:hover)
-    {
+
+    #abc:hover> :not(:hover) {
         opacity: 0.3;
     }
-    
-    #xyz{
+
+    #xyz {
         transform: scale(1.1);
     }
 
-    #cde
-    {
-      transition: 1s;
+    #cde {
+        transition: 1s;
     }
 
-    #cde:hover
-    {
-      transform: scale(1.07);
-      z-index: 2;
+    #cde:hover {
+        transform: scale(1.07);
+        z-index: 2;
     }
 }
 
 
 /* typing animation css */
-#typing-text-container{
+#typing-text-container {
     display: inline-block;
     min-height: 1.08em;
 }
 
-#text{
+#text {
     display: inline-block;
     white-space: nowrap;
 }
+
 /* typing animation css */
 
 
 /* download menu button hover */
-#oooo:hover{
-    background-color: #019510; 
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(13, 255, 0, 0.3);
-  border-color: #019510;
+#oooo:hover {
+    background-color: #019510;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(13, 255, 0, 0.3);
+    border-color: #019510;
 }
+
 /* download menu button hover */
 
 
 /* download menu button in phone view */
 @media (max-width: 576px) {
-  #oooo {
-    padding: 6px 12px;
-    font-size: 0.69rem;
-  }
+    #oooo {
+        padding: 6px 12px;
+        font-size: 0.69rem;
+    }
 }
+
 /* download menu button in phone view */
 
 
 
 /* back to top button css */
 #top-button {
-  color: #ce0404;
-  bottom: 30px; 
-  right: 30px; 
-  width: 45px; 
-  height: 45px; 
-  z-index: 999; 
-  transition: background-color 0.3s ease;
+    color: #ce0404;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    z-index: 999;
+    transition: background-color 0.3s ease;
 }
 
 #top-button:hover {
-  background-color: #019510 !important;
+    background-color: #019510 !important;
 }
+
 /* back to top button css */
-
-
-
-
