@@ -1,0 +1,54 @@
+body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: white ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card-success {
+      background-color: #ff0000; 
+      border-radius: 12px;
+      padding: 40px 30px;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      color: white; 
+    }
+
+    .card-success .icon {
+      font-size: 60px;
+      color: white; 
+    }
+
+    .card-success .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .card-success .message {
+      font-size: 14px;
+      margin: 15px 0 25px;
+    }
+
+    .btn-outline-red {
+      background-color: white;
+      color: #ff0000;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-outline-red:hover {
+      background-color: #ffeaea;
+      color: #d40000;
+    }

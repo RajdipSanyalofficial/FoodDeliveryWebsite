@@ -220,8 +220,8 @@ function validation() {
   }
 
   // Success
-  alert("Your order has been placed successfully!");
   document.querySelector("form").reset();
+  window.location.href="success.html";
   return true;
 }
 //Ends Order Now Form Validation 
