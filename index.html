@@ -16,6 +16,8 @@
 
   <!-- Font Awesome for icons -->
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
 
   <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,10 +157,25 @@
   <section id="explore" class="explore-section py-5">
     <div class="container">
       <h2>Explore Our Menu</h2>
-      <div class="d-flex flex-wrap justify-content-between align-items-center my-3 gap-2">
-        <button id="add-food-btn" class="btn btn-primary flex-grow-1 flex-md-grow-0">&#8594; See More</button>
-        <button id="remove-food-btn" class="btn btn-danger flex-grow-1 flex-md-grow-0">&#8592; See Less</button>
+
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 mb-4">
+        <button id="add-food-btn" class="btn btn-danger btn-foodie responsive-btn">
+          → See More
+        </button>
+        <div class="search-wrapper w-100">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="bi bi-search"></i>
+            </span>
+            <input type="text" id="food-search" class="form-control responsive-form border-start-0"
+              placeholder="Search food item..." />
+          </div>
+        </div>
+        <button id="remove-food-btn" class="btn btn-danger btn-foodie responsive-btn">
+          ← See Less
+        </button>
       </div>
+
       <div class="row" id="abc">
         <!-- Pizza -->
         <div class="col-md-2 col-6 food-item mb-4">
@@ -176,7 +193,7 @@
         <!-- Burger -->
         <div class="col-md-2 col-6 food-item mb-4">
           <div class="card">
-            <img src="burger640.jpg" alt="Burger" class="card-img-top img-fluid">
+            <img src="burgerpic2.jpg" alt="Burger" class="card-img-top img-fluid">
             <div class="card-body text-center">
               <h4>Veg Burger</h4>
               <div>
@@ -215,7 +232,7 @@
         <!-- Chilli Chicken -->
         <div class="col-md-2 col-6 food-item mb-4">
           <div class="card">
-            <img src="chicken2.png" alt="Chilli Chicken" class="card-img-top img-fluid">
+            <img src="Chilli Chicken pic2.jpg" alt="Chilli Chicken" class="card-img-top img-fluid">
             <div class="card-body text-center">
               <h4>Chilli Chicken</h4>
               <div>
@@ -308,7 +325,7 @@
               <div class="row" id="efg" style="display: none;">
                 <div class="col-md-2 col-6 food-item mb-4">
                   <div class="card">
-                    <img src="ChiliPaneerpic2.jpg" alt="Chilli Paneer" class="card-img-top img-fluid">
+                    <img src="Chilli Paneer pic 3.jpg" alt="Chilli Paneer" class="card-img-top img-fluid">
                     <div class="card-body text-center">
                       <h4>Chilli Paneer</h4>
                       <div>
@@ -337,7 +354,7 @@
                 <div class="row" id="efg" style="display: none;">
                   <div class="col-md-2 col-6 food-item mb-4">
                     <div class="card">
-                      <img src="Chocolate Pastrie.jpg" alt="Chocolate Pastries" class="card-img-top img-fluid">
+                      <img src="chocolate pestry pic3.jpg" alt="Chocolate Pastries" class="card-img-top img-fluid">
                       <div class="card-body text-center">
                         <h4>Chocolate Pastries</h4>
                         <div>
@@ -366,7 +383,7 @@
 
                     <div class="col-md-2 col-6 food-item mb-4">
                       <div class="card">
-                        <img src="icecream4.jpg" alt="Ice Cream" class="card-img-top img-fluid">
+                        <img src="vanilla ice cream pic2.jpg" alt="Vanilla Ice Cream" class="card-img-top img-fluid">
                         <div class="card-body text-center">
                           <h4>Vanilla Ice Cream</h4>
                           <div>
@@ -379,7 +396,7 @@
 
                     <div class="col-md-2 col-6 food-item mb-4">
                       <div class="card ">
-                        <img src="KajuBadamLassi.jpg" alt="Lassi" class="card-img-top img-fluid">
+                        <img src="Lassi pic 2.jpg" alt="Lassi" class="card-img-top img-fluid">
                         <div class="card-body text-center">
                           <h4>Kaju Badam Lassi</h4>
                           <div>
@@ -410,7 +427,7 @@
 
                     <div class="col-md-2 col-6 food-item mb-4">
                       <div class="card">
-                        <img src="MangoLassi3.jpg" alt="Mango Lassi" class="card-img-top img-fluid">
+                        <img src="mango lassi pic 3.jpg" alt="Mango Lassi" class="card-img-top img-fluid">
                         <div class="card-body text-center">
                           <h4>Special Mango Lassi</h4>
                           <div>
@@ -420,6 +437,97 @@
                         </div>
                       </div>
                     </div>
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="masala tea pic 3.jpg" alt="Masala Chai" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Masala Tea</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹25</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="lemon tea pic 2.jpg" alt="Lemon Chai" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Lemon Tea</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹20</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="Kulhad Tea.jpg" alt="Kulhad Chai" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Kulhad Tea</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹35</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="cappuccino pic 1.jpg" alt="cappuccino coffee" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Cappuccino</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹90</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="cafe mocha pic 1.jpg" alt="Cafe Mocaha" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Café Mocha</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹115</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-md-2 col-6 food-item mb-4">
+                      <div class="card">
+                        <img src="cold brew pic 1.jpg" alt="Cold Brew" class="card-img-top img-fluid">
+                        <div class="card-body text-center">
+                          <h4>Cold Brew</h4>
+                          <div>
+                            <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5
+                          </div>
+                          <p class="text-success">₹120</p>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
   </section>
@@ -614,6 +722,12 @@
                 <option value="Sushi">Kaju Badam Lassi</option>
                 <option value="Pasta">Dark Hot Chocolate</option>
                 <option value="Sushi">Special Mango Lassi</option>
+                <option value="Pasta">Masala Tea</option>
+                <option value="Pasta">Lemon Tea</option>
+                <option value="Pasta">Kulhad Tea</option>
+                <option value="Pasta">Cappuccino</option>
+                <option value="Pasta">Café Mocha</option>
+                <option value="Pasta">Cold Brew</option>
               </select>
             </div>
             <div class="mb-3">
@@ -670,13 +784,32 @@
   </section>
 
 
+  <!-- Download App Section -->
+  <div class="container-fluid py-5" style="background-color: #f9f9f9;">
+    <div class="container text-center">
+      <h5 class="fw-bold">For Better Experience Download<br>Foodiez App</h5>
+      <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mt-4">
+        <a href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+            alt="Google Play" style="height: 50px;">
+        </a>
+        <a href="#">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"
+            style="height: 50px;">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- End Download App Section -->
+
+
   <!-- Footer -->
   <section class="footer">
     <div class="container">
-      <div class="row">
+      <div class="row text-start">
         <div class="col-md-3">
           <h2>Foodiez</h2>
-          <p>
+          <p class="mb-0">
             Foodiez makes it easy to find and enjoy the food you’re craving—whether it’s a quick bite, comfort food, or
             something new to try. From local favorites to trending spots, we bring delicious meals right to your door,
             with a touch of care in every order.
@@ -703,7 +836,8 @@
         <div class="container my-5">
           <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-              <form class="d-flex flex-column flex-sm-row gap-2 justify-content-center align-items-stretch">
+              <form action="feedback.html" method="get"
+                class="d-flex flex-column flex-sm-row gap-2 justify-content-center align-items-stretch">
                 <input type="text" class="form-control flex-grow-1" placeholder="Enter your feedback">
                 <button type="submit" class="btn btn-warning">Submit</button>
               </form>

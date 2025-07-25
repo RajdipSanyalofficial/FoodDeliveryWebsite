@@ -1,54 +1,75 @@
 body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: white ;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 
-    .card-success {
-      background-color: #ff0000; 
-      border-radius: 12px;
-      padding: 40px 30px;
-      max-width: 360px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      color: white; 
-    }
+.card-success {
+  background-color: #ff0000;
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: white;
+}
 
-    .card-success .icon {
-      font-size: 60px;
-      color: white; 
-    }
+.card-success .icon {
+  font-size: 60px;
+  color: rgb(12, 176, 34);
+}
 
-    .card-success .title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+.card-success .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
 
-    .card-success .message {
-      font-size: 14px;
-      margin: 15px 0 25px;
-    }
+.card-success .message {
+  font-size: 16px;
+  margin: 15px 0 25px;
+}
 
-    .btn-outline-red {
-      background-color: white;
-      color: #ff0000;
-      border: none;
-      padding: 10px 24px;
-      border-radius: 30px;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.btn-outline-red {
+  background-color: white;
+  color: #ff0000;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-    .btn-outline-red:hover {
-      background-color: #ffeaea;
-      color: #d40000;
-    }
+.btn-outline-red:hover {
+  background-color: #ffeaea;
+  color: #d40000;
+}
+
+
+@media (max-width: 480px) {
+  .card-success {
+    padding: 30px 20px;
+  }
+
+  .card-success .title {
+    font-size: 20px;
+  }
+
+  .card-success .message {
+    font-size: 14px;
+  }
+
+  .btn-outline-red {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}

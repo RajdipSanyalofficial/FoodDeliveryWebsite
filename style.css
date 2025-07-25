@@ -932,3 +932,70 @@ p>.fas {
         margin-right: 0%;
     }
 }
+
+
+
+.btn-foodie {
+    width: 100%;
+    max-width: 200px;
+    align-self: center;
+}
+
+.responsive-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+}
+
+
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+@media (max-width: 767.98px) {
+    .responsive-form {
+        max-width: 473px;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .btn-foodie {
+        width: 100%;
+        max-width: 512px;
+        align-self: center;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .responsive-form {
+        width: 39%;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .responsive-btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .responsive-form {
+        width: 100%;
+        font-size: 1.25rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .search-wrapper {
+        flex-grow: 1;
+    }
+
+    .responsive-btn {
+        font-size: 1.15rem;
+        padding: 0.65rem 1.25rem;
+    }
+}

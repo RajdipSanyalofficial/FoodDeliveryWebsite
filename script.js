@@ -1,40 +1,27 @@
-//Active NavBar
+// Active NavBar 
 document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section[id]");
 
-  // Handle click-based active state
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navLinks.forEach((nav) => nav.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-
-  // Handle scroll-based active state
   window.addEventListener("scroll", () => {
-    let currentSection = "";
-    const scrollY = window.pageYOffset;
+    let current = "";
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 150;
-      const sectionHeight = section.offsetHeight;
-
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        currentSection = section.getAttribute("id");
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
       }
     });
 
     navLinks.forEach((link) => {
       link.classList.remove("active");
-      if (link.getAttribute("href").includes(currentSection)) {
+      if (link.getAttribute("href").includes(current)) {
         link.classList.add("active");
       }
     });
   });
 });
-//Active NavBar
-
+// Active NavBar 
 
 // Nav bar close in mobile view
 document.addEventListener('DOMContentLoaded', function () {
@@ -63,13 +50,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 //Food Section
 document.addEventListener("DOMContentLoaded", () => {
   const foodContainer = document.getElementById("abc");
   const hiddenFoodContainer = document.getElementById("efg");
   const nextFoodBtn = document.getElementById("add-food-btn");
   const prevFoodBtn = document.getElementById("remove-food-btn");
+  const searchInput = document.getElementById("food-search");
 
   // Function to show the next hidden food card
   const showNextCard = () => {
@@ -94,12 +81,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const filterFoodCards = () => {
+    const query = searchInput.value.toLowerCase().trim();
+    const allCards = document.querySelectorAll("#abc .food-item, #efg .food-item");
+
+    allCards.forEach(card => {
+      const title = card.querySelector("h4").textContent.toLowerCase();
+      card.style.display = title.includes(query) ? "block" : "none";
+    });
+  };
+
   // Event Listeners for buttons
   nextFoodBtn.addEventListener("click", showNextCard);
   prevFoodBtn.addEventListener("click", showPrevCard);
+  searchInput?.addEventListener("input", filterFoodCards);
 });
-
-
 
 
 //Starts Order Now Form Validation
@@ -221,11 +217,26 @@ function validation() {
 
   // Success
   document.querySelector("form").reset();
-  window.location.href="success.html";
+  window.location.href = "success.html";
   return true;
 }
 //Ends Order Now Form Validation 
 
+//Feedback Form Validation
+document.addEventListener("DOMContentLoaded", () => {
+  const feedbackForm = document.querySelector('form[action="feedback.html"]');
+  const feedbackInput = feedbackForm.querySelector('input[type="text"]');
+
+  feedbackForm.addEventListener("submit", function (e) {
+    const feedback = feedbackInput.value.trim();
+
+    if (feedback === "") {
+      e.preventDefault(); 
+      alert("Please enter your feedback before submitting!");
+    }
+  });
+});
+//Feedback Form Validation
 
 // Typing Animation starts
 const texts = ["Enjoy Our Delicious Food", "Click Below For Our Menu"];
