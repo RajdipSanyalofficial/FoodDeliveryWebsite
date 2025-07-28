@@ -2,7 +2,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
+  const orderNowBtn = document.querySelector(".main-btn");
 
+  // Scroll-based active link
   window.addEventListener("scroll", () => {
     let current = "";
 
@@ -20,12 +22,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // If "Order Now" is clicked
+  if (orderNowBtn) {
+    orderNowBtn.addEventListener("click", function () {
+      // Remove active from all .nav-link items
+      navLinks.forEach((nav) => nav.classList.remove("active"));
+
+      // Find the real nav link pointing to #order and activate it
+      navLinks.forEach((nav) => {
+        if (nav.getAttribute("href") === "#order") {
+          nav.classList.add("active");
+        }
+      });
+    });
+  }
+
 });
-// Active NavBar 
+// Active NavBar
+
 
 // Nav bar close in mobile view
 document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .main-btn');
   const navbarCollapse = document.getElementById('navbarNav');
   const topButton = document.getElementById("top-button");
 
@@ -38,16 +57,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  //Applied for arrow button 
-  topButton.addEventListener("click", function () {
-    const collapse = bootstrap.Collapse.getInstance(navbarCollapse);
-    if (collapse && navbarCollapse.classList.contains("show")) {
-      collapse.hide();
-    }
-  });
-  //Applied for arrow button 
-
+  // Applied for arrow button
+  if (topButton) {
+    topButton.addEventListener("click", function () {
+      const collapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (collapse && navbarCollapse.classList.contains("show")) {
+        collapse.hide();
+      }
+    });
+  }
 });
+
+
+//Toggle Button
+const toggleBtn = document.getElementById('customToggleBtn');
+const toggleIcon = document.getElementById('toggleIcon');
+
+
+toggleBtn.addEventListener('click', () => {
+  const isMenuOpen = toggleIcon.classList.contains('fa-bars');
+
+  toggleIcon.classList.toggle('fa-bars', !isMenuOpen);
+  toggleIcon.classList.toggle('fa-times', isMenuOpen);
+});
+
+
+const navbarCollapse = document.getElementById('navbarNav');
+navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+  toggleIcon.classList.remove('fa-times');
+  toggleIcon.classList.add('fa-bars');
+});
+//Toggle Button
+
 
 
 //Food Section
@@ -231,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const feedback = feedbackInput.value.trim();
 
     if (feedback === "") {
-      e.preventDefault(); 
+      e.preventDefault();
       alert("Please enter your feedback before submitting!");
     }
   });
