@@ -139,22 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//Form Submission
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("order-form");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); 
-
-    if (validation()) {
-      form.reset(); 
-      window.location.href = "success.html";
-    }
-  });
-});
-//Form Submission
-
-
 //Starts Order Now Form Validation
 function validation() {
   const name = document.getElementById("name").value.trim();
@@ -166,62 +150,67 @@ function validation() {
   const state = document.getElementById("state").value;
   const zip = document.getElementById("zip").value.trim();
   const quantity = document.getElementById("quantity").value.trim();
-  const upiId = document.getElementById("upi-id")?.value.trim();
   const paymentMethods = document.getElementsByName("paymentMethod");
-
   const cardSelected = document.getElementById("card").checked;
   const upiSelected = document.getElementById("upi").checked;
-
+  const upiId = document.getElementById("upiId")?.value.trim();
   const cardName = document.getElementById("cardName").value.trim();
   const cardNumber = document.getElementById("cardNumber").value.trim();
   const expiry = document.getElementById("expiry").value.trim();
   const cvv = document.getElementById("cvv").value.trim();
 
-  // Basic checks
+  //Required field 
   if (!name || !email || !phone || !address || !country || !zip || !quantity) {
-    alert("Please fill in all required fields.");
+    alert("Please fill in all fields.");
     return false;
   }
 
+  //Email
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     alert("Please enter a valid email address.");
     return false;
   }
 
+  //Phone number
   const phonePattern = /^\d{10}$/;
   if (!phonePattern.test(phone)) {
     alert("Please enter a valid 10-digit phone number.");
     return false;
   }
 
+  //Country
   if (country !== "India") {
     alert("We only deliver in India.");
     return false;
   }
 
+  //State
   if (state === "") {
     alert("Please select your state.");
     return false;
   }
 
+  //ZIP
   const zipPattern = /^\d{6}$/;
   if (!zipPattern.test(zip)) {
     alert("Please enter a valid 6-digit ZIP code.");
     return false;
   }
 
+  //Food
   if (food === "") {
     alert("Please select a food item.");
     return false;
   }
 
+  //Quantity
   if (isNaN(quantity) || quantity < 1) {
-    alert("Please enter a valid quantity.");
+    alert("Please enter a valid quantity (at least 1).");
     return false;
   }
 
-  // Payment check
+  //Payment method
   let paymentSelected = false;
   for (let i = 0; i < paymentMethods.length; i++) {
     if (paymentMethods[i].checked) {
@@ -234,13 +223,15 @@ function validation() {
     return false;
   }
 
+  //UPI 
   if (upiSelected) {
-    if (!upiId || !upiId.includes("@")) {
-      alert("Please enter a valid UPI ID.");
+    if (!upiId || !/^[\w.-]+@[\w]+$/.test(upiId)) {
+      alert("Please enter a valid UPI ID (e.g., user@upi).");
       return false;
     }
   }
 
+  //Card
   if (cardSelected) {
     if (!cardName || !cardNumber || !expiry || !cvv) {
       alert("Please fill in all card details.");
@@ -248,7 +239,7 @@ function validation() {
     }
 
     const cardNumPattern = /^\d{16}$/;
-    if (!cardNumPattern.test(cardNumber.replace(/\s|-/g, ""))) {
+    if (!cardNumPattern.test(cardNumber.replace(/\s|-/g, ''))) {
       alert("Please enter a valid 16-digit card number.");
       return false;
     }
@@ -261,12 +252,20 @@ function validation() {
 
     const cvvPattern = /^\d{3,4}$/;
     if (!cvvPattern.test(cvv)) {
-      alert("Please enter a valid 3- or 4-digit CVV.");
+      alert("Please enter a valid 3-digit CVV.");
       return false;
     }
   }
 
-  return confirm("Are you sure you want to place the order?");
+  // Confirmation
+  const abcd = confirm("Are you sure you want to place the order?");
+  if (!abcd) {
+    return false
+  }
+  // Success
+  document.querySelector("form").reset();
+  window.location.href = "success.html";
+  return true;
 }
 //Ends Order Now Form Validation 
 
@@ -288,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //Feedback Form Validation
 
 
-// Typing Animation starts
+//Typing Animation starts
 const texts = ["Enjoy Our Delicious Food", "Click Below For Our Menu"];
 let index = 0;
 let charIndex = 0;
