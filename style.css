@@ -567,7 +567,7 @@ html {
 
     .carousel-inner img {
         width: 100%;
-        height: 57vh;
+        height: 69vh;
         margin-top: 0%;
         margin-right: 0%;
     }
@@ -828,7 +828,7 @@ p>.fas {
 
     .carousel-inner img {
         width: 100%;
-        height: 55.5vh;
+        height: 70.5vh;
         margin-top: 0%;
         margin-right: 0%;
     }
@@ -927,7 +927,7 @@ p>.fas {
 @media (min-width: 992px) and (max-width: 1030px) {
     .carousel-inner img {
         width: 100%;
-        height: 60.0vh;
+        height: 69.0vh;
         margin-top: -1%;
         margin-right: 0%;
     }
